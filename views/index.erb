@@ -2,6 +2,10 @@
   <p>Name: <%= order.pretty_name() %> </p>
   <p>Order: <%= order.quantity() %> x <%= order.topping() %></p>
   <p> <a href="/pizza-orders/<%= order.id  %>">Show order</a></p>
+  <form method="post" action="/pizza-orders/<%= order.id  %>/delete">
+    <input type="submit" value="Delete Pizza" />
+  </form>
+
   <hr />
 
 
