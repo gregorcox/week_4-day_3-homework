@@ -40,3 +40,10 @@ get '/pizza-orders/:id/edit' do
   @order = PizzaOrder.find(params[:id].to_i)
   erb( :edit )
 end
+
+#UPDATE
+post '/pizza-orders/:id' do
+  @order = PizzaOrder.new(params)
+  @order.update()
+  erb( :update )
+end
